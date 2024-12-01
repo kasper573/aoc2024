@@ -1,5 +1,5 @@
 export function day1(input: string): number {
-  const { left, right } = lists(input);
+  const { left, right } = day1_lists(input);
   left.sort();
   right.sort();
   return left.reduce((sum, l, index) => {
@@ -9,7 +9,7 @@ export function day1(input: string): number {
   }, 0);
 }
 
-function lists(input: string) {
+export function day1_lists(input: string) {
   const left: number[] = [];
   const right: number[] = [];
   for (const row of input.split(/\n/)) {
